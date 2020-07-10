@@ -1,0 +1,98 @@
+<section>
+    <div class="container">
+        <div class="card">
+
+            <div class="card-body">
+
+                <form ngNativeValidate ngNativeValidate [formGroup]="forma" (ngSubmit)="registrarUsuario()" id="loginform">
+
+                    <h3 class="box-title m-t-40 m-b-0 text-center">Registrarse en StockerAPP</h3>
+                    <hr>
+                    <div class="form-group m-t-20">
+                        <div class="col-xs-12">
+                            <input formControlName="nombre" name="nombre" class="form-control" type="text" required placeholder="Ingrese su Nombre ">
+                        </div>
+                    </div>
+                    <div class="form-group m-t-20">
+                        <div class="col-xs-12">
+                            <input formControlName="apellido" name="apellido" class="form-control" type="text" required placeholder="Ingrese su Apellido ">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-12">
+                            <input formControlName="email" name="email" class="form-control" type="email" required placeholder="Ingrese su Email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-12">
+                            <input formControlName="empresa" name="empresa" class="form-control" type="text " required placeholder="Ingrese el nombre de su Empresa">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-12">
+                            <input formControlName="password" name="password" class="form-control" type="password" placeholder="Ingrese su Contraseña">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-12">
+                            <input formControlName="password2" name="password2" class="form-control" type="password" placeholder="Confirmar Contraseña">
+                        </div>
+                    </div>
+                    <div class="form-group" *ngIf="forma.errors?.sonIguales && !forma.pristine">
+                        <div class="alert alert-danger" role="alert">
+                            <p class="text-danger">
+
+                                Las contraseñas deben ser iguales.
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-12">
+                            <input formControlName="telefono" name="telefono" class="form-control" type="text" required placeholder="Ingrese su Telefono">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-xs-12">
+                            <input formControlName="dni" name="DNI" class="form-control" type="text" required placeholder="Ingrese su DNI">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-xs-12">
+                            <input formControlName="cuit" name="cuit" class="form-control" type="text" required placeholder="Ingrese su CUIT">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-12">
+                            <input formControlName="direccion" name="direccion" class="form-control" type="text" required placeholder="Ingrese su Direccion">
+                        </div>
+
+
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-md-12">
+                            <div class="checkbox checkbox-primary p-t-0">
+                                <input formControlName="condiciones" name="condiciones" id="checkbox-signup" type="checkbox">
+                                <label class="form-check-label m-2"> Estoy de acuerdo con los <a href="# ">Términos</a></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group text-center m-t-20">
+                        <div class="col-xs-12">
+                            <button class="btn btn-info btn-lg btn-group text-uppercase waves-effect waves-light" type="submit">Registrarme </button>
+                        </div>
+                    </div>
+                    <div class="form-group m-b-0">
+                        <div class="col-sm-12 text-center">
+                            <p>Ya tenes una cuenta ? <a routerLink='/login' class="text-info m-l-5"><b>Ingresa Ahora</b></a></p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</section>

@@ -1,0 +1,57 @@
+<section>
+    <div class="container">
+        <div class="card">
+
+            <div class="card-body">
+
+                <form ngNativeValidate ngNativeValidate [formGroup]="forma" (ngSubmit)="registrarProducto()" id="loginform">
+
+                    <h3 class="box-title m-t-40 m-b-0 text-center subtitulo">Registrar un nuevo Producto</h3>
+                    <hr>
+                    <div class="form-group m-t-20">
+                        <div class="col-xs-12">
+                            <input formControlName="nombre" name="nombre" class="form-control" type="text" required placeholder="Ingrese Nombre ">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-12">
+                            <input formControlName="descripcion" name="descripcion" class="form-control" type="text" required placeholder="Descripcion">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-xs-12">
+                            <input formControlName="stock" name="stock" class="form-control" type="number" required placeholder="Ingrese Cantidad">
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <div class="col-xs-12">
+                            <input formControlName="precio" name="precio" class="form-control" type="number" required placeholder="Precio">
+                        </div>
+                    </div>
+                    <select formControlName="proveedor" class="form-control" required> 
+                        <option value="">Seleccione proveedor</option>
+                        <option class="form-control" *ngFor="let  proveedor of proveedores" [value]="proveedor._id">
+                            {{proveedor.nombre}}
+                        </option>
+ 
+
+                    </select>
+
+
+                    <div class="form-group text-center m-t-20 mt-5">
+                        <div class="col-xs-12">
+                            <button class="btn btn-dark btn-lg btn-group text-uppercase waves-effect waves-light" type="submit">Registar Producto </button>
+                        </div>
+                    </div>
+
+
+
+                </form>
+            </div>
+        </div>
+
+    </div>
+</section>

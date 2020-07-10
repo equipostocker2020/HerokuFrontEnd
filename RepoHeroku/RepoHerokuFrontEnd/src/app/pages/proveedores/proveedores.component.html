@@ -1,0 +1,93 @@
+<section>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+
+
+                <div class="row animated fadeIn">
+                    <div class="col-12">
+
+                        <div class="card">
+                            <div class="card-title">
+
+                                <h3 class="text-center mt-2 subtitulo"> Gestion de Proveedores </h3>
+                                <hr>
+
+                            </div>
+
+
+                            <div class="card-body">
+                                <div class="">
+
+                                    <h5 class="text-center mt-2 subtitulo">Proveedores Registrados (<small>{{totalRegistros}}</small>)</h5>
+
+                                </div>
+
+                                <input #input (keyup)="buscarProveedor(input.value)" type="text" class="form-control mt-4" placeholder="Buscar Proveedor...">
+                                <button routerLink="/proveedores/cargarproveedor" class="btn btn-dark btn-small buttoncontent mt-2">
+                                     <fa-icon [icon]="faPlus"></fa-icon>
+                                 Registrar nuevo proveedor
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="table-responsive table-bordered">
+                    <table class="table color-bordered-table info-bordered-table">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Imagen</th>
+                                <th>Nombre</th>
+                                <th>Direccion</th>
+                                <th>Correo</th>
+                                <th>Cuit</th>
+                                <th>telefono</th>
+                                <th>AFIP</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let proveedor of provedores">
+
+                                <td class="w70">
+                                    <!-- <img (click)="mostrarModal( usuario._id)" [src]="pipe" class="img-50 img-circle pointer"> -->
+                                </td>
+                                <td class="text">
+                                    {{proveedor.nombre}}
+                                </td>
+                                <td class="text">
+                                    {{proveedor.direccion}}
+                                </td>
+                                <td class="text">
+                                    {{proveedor.email}}
+                                </td>
+                                <td class="text">
+                                    {{proveedor.cuit}}
+
+                                </td>
+                                <td class="text">
+                                    {{proveedor.telefono}}
+                                </td>
+                                <td class="text">
+                                    {{proveedor.situacion_afip}}
+                                </td>
+                                <td class="text">
+                                    <button (click)="guardarStorage(id, token, proveedor)" routerLink="/proveedor/actualizarproveedor" class="btn btn-primary">
+                                         <fa-icon [icon]="faEdit"></fa-icon>
+                                    </button>
+                                    <button (click)="borrarProveedor(proveedor)" class="btn btn-danger">
+                                         <fa-icon [icon]="faTrash"></fa-icon> 
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>

@@ -1,0 +1,95 @@
+<section>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+
+
+                <div class="row animated fadeIn">
+                    <div class="col-12">
+
+                        <div class="card">
+                            <div class="card-title">
+
+                                <h3 class="text-center mt-2 subtitulo"> Gestion de Productos </h3>
+                                <hr>
+
+                            </div>
+
+
+                            <div class="card-body">
+                                <div class="">
+
+
+                                    <h5 class="text-center mt-2 subtitulo">Productos Registrados (<small>{{totalRegistros}}</small>)</h5>
+                                </div>
+
+                                <input #input (keyup)="buscarProducto(input.value)" type="text" class="form-control mt-4" placeholder="Buscar Productos...">
+                                <button routerLink="/productos/cargarproductos" class="btn btn-dark btn-small align-baseline buttoncontent mt-2">
+                                    <fa-icon [icon]="faPlus"></fa-icon> 
+                                Registrar nuevo producto
+                               </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="table-responsive table-bordered">
+                    <table class="table color-bordered-table info-bordered-table">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Imagen</th>
+                                <th>Nombre</th>
+                                <th>Descripcion</th>
+                                <th>Proveedor</th>
+                                <th>Email Proveedor</th>
+                                <th>Stock</th>
+                                <th>Precio</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let producto of productos">
+
+                                <td class="w70">
+                                    <!-- <img (click)="mostrarModal( usuario._id)" [src]="pipe" class="img-50 img-circle pointer"> -->
+                                </td>
+                                <td class="text">
+                                    {{producto.nombre}}
+                                </td>
+                                <td class="text">
+                                    {{producto.descripcion}}
+                                </td>
+                                <td class="text">
+                                    {{producto.proveedor.nombre}}
+                                </td>
+                                <td class="text">
+                                    {{producto.proveedor.email}}
+                                </td>
+                                <td class="text">
+                                    {{producto.stock}}
+                                </td>
+                                <td class="text">
+                                    $ {{producto.precio}}
+                                </td>
+
+                                <td>
+                                    <button class="btn btn-primary">
+                                        <fa-icon [icon]="faEdit"></fa-icon>
+                                    
+                                    </button>
+                                    <button  class="btn btn-danger">
+                                        <fa-icon [icon]="faTrash"></fa-icon>
+                            
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>

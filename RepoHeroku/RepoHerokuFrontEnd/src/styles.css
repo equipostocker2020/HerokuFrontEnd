@@ -1,0 +1,30 @@
+.text {
+    font-size: 14px;
+}
+
+.h3titulo {
+    color: white !important;
+    font-family: monospace;
+    font-size: 50px;
+    font-weight: 900;
+    -webkit-text-stroke: 0.5px black;
+    color: transparent;
+}
+
+body {
+    font-family: monospace;
+    background: rgb(215, 214, 228);
+    background: radial-gradient(circle, rgba(215, 214, 228, 1) 2%, rgba(0, 0, 0, 0.8813900560224089) 100%, rgba(0, 212, 255, 1) 100%);
+}
+
+.inputtext {
+    font-size: 12px;
+}
+
+hr {
+    height: 0.2px;
+    width: auto;
+    background-color: gray;
+    -webkit-text-stroke: 1px gray;
+    color: transparent;
+}

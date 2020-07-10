@@ -1,0 +1,55 @@
+<section>
+    <div class="container">
+        <div class="card">
+
+            <div class="card-body">
+
+                <form ngNativeValidate ngNativeValidate [formGroup]="forma" (ngSubmit)="registrarProveedor()" id="loginform">
+                    <h3 class="box-title m-t-40 m-b-0 text-center subtitulo">Registrar un nuevo Proveedor</h3>
+                    <hr>
+                    <div class="form-group m-t-20">
+                        <div class="col-xs-12">
+                            <input formControlName="nombre" name="nombre" class="form-control" type="text" required placeholder="Ingrese su Nombre ">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-12">
+                            <input formControlName="direccion" name="direccion" class="form-control" type="text" required placeholder="Direccion">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-xs-12">
+                            <input formControlName="email" name="email" class="form-control" type="email" required placeholder="Ingrese su Email">
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <div class="col-xs-12">
+                            <input formControlName="cuit" name="cuit" class="form-control" type="text" required placeholder="Ingrese su CUIT">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-xs-12">
+                            <input formControlName="telefono" name="telefono" class="form-control" type="text" required placeholder="Telefono">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-12">
+                            <input formControlName="situacion_afip" name="situacion_afip" class="form-control" type="text" required placeholder="Situacion Afip">
+                        </div>
+                    </div>
+
+                    <div class="form-group text-center m-t-20">
+                        <div class="col-xs-12">
+                            <button class="btn btn-dark btn-lg btn-group text-uppercase waves-effect waves-light" type="submit">Registar Proveedor </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</section>
