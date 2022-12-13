@@ -29,7 +29,7 @@
         "@fortawesome/angular-fontawesome": "^0.3.0",
         "@fortawesome/fontawesome-svg-core": "^1.2.28",
         "@fortawesome/free-solid-svg-icons": "^5.13.0",
-        "express": "^4.17.1",
+        "express": "^4.17.3",
         "path": "^0.12.7",
         "rxjs": "~6.5.4",
         "rxjs-compat": "^6.5.5",
